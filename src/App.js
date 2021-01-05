@@ -1,5 +1,6 @@
 import React from "react";
 import './App.css';
+import Weather from "./Weather";
 
 export default function App() {
   return (
@@ -8,8 +9,8 @@ export default function App() {
         <div className="transparent-box">
           <div className="background">
             <div className="content">
+            <Weather />
             </div>
-            <h1> Weather App</h1>
             <small>
               <a
                href="https://github.com/rozenlior/react-weather-app"
