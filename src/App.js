@@ -1,6 +1,7 @@
 import React from "react";
 import './App.css';
 import Weather from "./Weather";
+import "./01d.jpg";
 
 export default function App() {
   return (
@@ -11,6 +12,8 @@ export default function App() {
             <div className="content">
             <Weather />
             </div>
+              </div>
+        </div>
             <small>
               <a
                href="https://github.com/rozenlior/react-weather-app"
@@ -18,8 +21,7 @@ export default function App() {
         rel="noreferrer">
         Open-source code </a> {" "} by Lior Rozen          
              </small>
-          </div>
-        </div>
+        
       </div>
     </div>
   );
