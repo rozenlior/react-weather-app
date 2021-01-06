@@ -3,6 +3,28 @@
   margin-bottom: 0;
 }
 
+form.search-form {
+  margin: 15px;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+input.search-box {
+  border-radius: 10px;
+  max-width: 500px;
+  position: relative;
+  left: 10px;
+  bottom: 4px;
+}
+
+input.btn-light {
+  border-radius: 10px;
+  color: #536b78;
+  max-width: 60px;
+  position: relative;
+  right: 10px;
+  bottom: 4px;
+}
 .sub-heading {
   margin: 10px 20px;
   text-align: left;

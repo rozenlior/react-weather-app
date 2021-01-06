@@ -8,7 +8,22 @@ export default function Weather() {
       <span className="col header">
         <h1> Los Angeles </h1>
       </span>
- 
+  <form className="search-form">
+          <span className="col-10">
+            <input
+              type="search"
+              placeholder="Enter City..."
+              className="form-control search-box"
+            />
+          </span>
+          <span className="col">
+            <input
+              type="submit"
+              value="Go"
+              className="form-control btn btn-light"
+            />
+          </span>
+        </form>
     </div>
     <div className="row">
       <div className="col sub-heading">
