@@ -1,12 +1,33 @@
-import React from "react";
+import axios from "axios";
+import React, {useState} from "react";
 import "./Weather.css";
+ import Loader from 'react-loader-spinner'
 
-export default function Weather() {
-  return(
+
+
+
+
+export default function Weather(props) {
+  const[weatherData, setWeatherData]=useState({ready: false});
+function handleResponse (response){
+  console.log(response.data);
+  setWeatherData({
+    ready: true,
+    temperature: Math.round(response.data.main.temp),
+    wind: response.data.wind.speed,
+    humidity: response.data.main.humidity,
+    description: response.data.weather[0].main,
+    high: Math.round(response.data.main.temp_max),
+    low: Math.round(response.data.main.temp_min)
+  })
+}
+
+if (weatherData.ready) {
+   return(
     <div className="Weather"> 
     <div className="row heading-wrapper">
       <span className="col header">
-        <h1> Los Angeles </h1>
+        <h1> {props.defaultCity}</h1>
       </span>
   <form className="search-form">
           <span className="col-10">
@@ -28,7 +49,7 @@ export default function Weather() {
     <div className="row">
       <div className="col sub-heading">
         <h2> Friday</h2>
-        <h3> Cloudy </h3>
+        <h3> {weatherData.description} </h3>
       </div>
     </div>
   
@@ -40,7 +61,7 @@ export default function Weather() {
       </div>
 
       <div className="col main-temp-col">
-        <span className="current-temp"></span>
+        <span className="current-temp">{weatherData.temperature}</span>
         <span className="units">
           <span className="units">
             <a href="/" className="active">
@@ -54,12 +75,12 @@ export default function Weather() {
       <div className="col-5">
         <ul className="special-temp-info">
           <li>
-            <strong>High/Low:</strong> °/ °
+            <strong>High/Low:</strong> {weatherData.high}°/{weatherData.low}°
           </li>
           <li>
-            <strong>Humidity: </strong>%
+            <strong>Humidity: </strong> {weatherData.humidity}%
           </li>
-          <li><strong>Wind:</strong> km/h
+          <li><strong>Wind:</strong> {Math.round(weatherData.wind)} km/h
           </li>
           <li>
             <strong>AQI:</strong>
@@ -69,4 +90,20 @@ export default function Weather() {
     </div>
       </div>
   );
+
+} else {
+  const apiKey="958b71e38c385a4f0896342006026aa2";
+  let unit="metric";
+  let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=${unit}`; 
+  axios.get(apiUrl).then(handleResponse);
+
+ return (
+ <Loader
+         type="ThreeDots"
+         color="#00BFFF"
+         height={100}
+         width={100}
+      />
+ );
+}
 }

@@ -10,7 +10,7 @@ export default function App() {
         <div className="transparent-box">
           <div className="background">
             <div className="content">
-            <Weather />
+            <Weather defaultCity="Los Angeles" />
             </div>
               </div>
         </div>

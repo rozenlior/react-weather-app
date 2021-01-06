@@ -44,7 +44,6 @@ h1 {
   margin-bottom: 20px;
 }
 
-
 h2,
 h3 {
   line-height: 1;
@@ -83,7 +82,7 @@ h3 {
 .units {
   color: black;
   position: relative;
-  top: -15px;
+  top: -12px;
 }
 
 .special-temp-info {
@@ -95,3 +94,5 @@ h3 {
   margin: 0 auto;
   text-align: left;
 }
+
+
