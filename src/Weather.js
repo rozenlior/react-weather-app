@@ -2,16 +2,16 @@ import axios from "axios";
 import React, {useState} from "react";
 import "./Weather.css";
  import Loader from 'react-loader-spinner'
-
-
-
+ import FormattedDate from "./FormattedDate";
 
 
 export default function Weather(props) {
   const[weatherData, setWeatherData]=useState({ready: false});
+
 function handleResponse (response){
   console.log(response.data);
   setWeatherData({
+    date: new Date(response.data.dt * 1000),
     ready: true,
     temperature: Math.round(response.data.main.temp),
     wind: response.data.wind.speed,
@@ -19,7 +19,7 @@ function handleResponse (response){
     description: response.data.weather[0].main,
     high: Math.round(response.data.main.temp_max),
     low: Math.round(response.data.main.temp_min)
-  })
+  });
 }
 
 if (weatherData.ready) {
@@ -48,7 +48,9 @@ if (weatherData.ready) {
     </div>
     <div className="row">
       <div className="col sub-heading">
-        <h2> Friday</h2>
+        <h2> 
+          <FormattedDate date={weatherData.date} />
+        </h2>
         <h3> {weatherData.description} </h3>
       </div>
     </div>
