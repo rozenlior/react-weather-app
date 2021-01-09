@@ -14,25 +14,22 @@ export default function WeatherInfo(props) {
     </div>
   
     <div className="row row-wrapper">
-      <div className="col-2">
+      <div className="col">
         <div className="main-icon">
-          <img src="#" alt="" />
+          <img src={props.data.icon} alt={props.data.description} />
         </div>
       </div>
 
-      <div className="col-5 main-temp-col">
+      <div className="col main-temp-col">
         <span className="current-temp">{props.data.temperature}</span>
         <span className="units">
           <span className="units">
             <a href="/" className="active">
-              °C
-            </a>{" "}
-            | <a href="/">°F</a>
-          </span>
+              °C </a>{" "}</span>
         </span>
       </div>
 
-      <div className="col-7">
+      <div className="col-5">
         <ul className="special-temp-info">
           <li>
             <strong>High/Low:</strong> {props.data.high}°/{props.data.low}°
