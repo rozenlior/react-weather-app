@@ -96,7 +96,8 @@ h3 {
 .units {
   color: black;
   position: relative;
-  top: -12px;
+  top: -38px;
+  right: 20px
 }
 
 .special-temp-info {
