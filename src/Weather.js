@@ -22,7 +22,7 @@ function handleResponse (response){
     low: Math.round(response.data.main.temp_min),
     city: response.data.name,
     icon: `/img-icons/${response.data.weather[0].icon}.png`,
-    background: `/img-background/${response.data.weather[0].icon}.jpg`
+    background: `url(/img-background/${response.data.weather[0].icon}.jpg)`
   });
 }
 
@@ -45,9 +45,7 @@ function search() {
 if (weatherData.ready) {
    return(
     <div className="Weather">
-         <div className="transparent-box">
-          <div className="background">
-<img src={weatherData.background} alt="" className="background-img" />
+         <div className="transparent-box" style={{backgroundImage:weatherData.background}}>
     <div className="row heading-wrapper">
       <span className="col header">
         <h1> {weatherData.city} </h1>
@@ -72,8 +70,8 @@ if (weatherData.ready) {
    <WeatherInfo data={weatherData} />
     </div>
     </div>
-    </div> 
-   </div> );
+    </div>
+ );
 
 } else {
  
