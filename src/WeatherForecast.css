@@ -1,0 +1,25 @@
+.forecast-wrapper {
+  background: whitesmoke;
+  opacity: 0.8;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.hourly-forecast {
+  text-align: center;
+  font-size: 16px;
+}
+
+.forecast-icons img {
+  max-width: 70px;
+  margin: 20px auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+.highs-lows {
+  font-size: 13px;
+  text-align: center;
+}

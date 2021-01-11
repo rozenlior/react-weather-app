@@ -3,6 +3,8 @@ import React, {useState} from "react";
 import "./Weather.css";
  import Loader from 'react-loader-spinner'
  import WeatherInfo from "./WeatherInfo";
+  import WeatherForecast from "./WeatherForecast";
+
 
 
 export default function Weather(props) {
@@ -10,7 +12,6 @@ export default function Weather(props) {
   const [city, setCity]=useState(props.defaultCity);
 
 function handleResponse (response){
-  console.log(response.data);
   setWeatherData({
     date: new Date(response.data.dt * 1000),
     ready: true,
@@ -68,6 +69,7 @@ if (weatherData.ready) {
           </span>
         </form>
    <WeatherInfo data={weatherData} />
+   <WeatherForecast city={weatherData.city}/>
     </div>
     </div>
     </div>

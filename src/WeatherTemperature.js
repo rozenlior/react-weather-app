@@ -22,15 +22,15 @@
     <div className="WeatherTemperature">
      <span className="current-temp">{props.celsius} </span>
   <span className="units">°C | {" "}
-  <a href="/" onCLick={showFahrenheit}>°F</a>
+  <a href="/" onClick={showFahrenheit}>°F</a>
   </span>
   </div>
   );
  } else {
    return (
      <div className="WeatherTemperature">
-       <span className="current-temp">{fahrenheit()}</span>
-        <span className="units"><a href="/" onCLick={showCelsius}>°C</a>{" "} | °F
+       <span className="current-temp">{Math.round(fahrenheit())}</span>
+        <span className="units"><a href="/" onClick={showCelsius}>°C</a>{" "} | °F
       </span>
     </div>
   );
