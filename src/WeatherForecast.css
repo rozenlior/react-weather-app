@@ -23,3 +23,8 @@
   font-size: 13px;
   text-align: center;
 }
+
+
+.WeatherForecastPreview.col{
+margin: 0 5px;
+}
