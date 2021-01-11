@@ -8,15 +8,20 @@ function hours() {
   return `${hours}:00`;
 }
 
-function temperatureMax() {
-  let temperatureMax= Math.round(props.data.main.temp_max);
-  return `${temperatureMax}`;
-}
 
-function temperatureMin() {
-  let temperatureMin= Math.round(props.data.main.temp_min);
-  return `${temperatureMin}`;
-}
+
+  function temperature() {
+    let maxTemperature = Math.round(props.data.main.temp_max);
+    let minTemperature = Math.round(props.data.main.temp_min);
+    if (props.unit === "fahrenheit") {
+      maxTemperature = Math.round(((maxTemperature - 32) * 5) / 9);
+      minTemperature = Math.round(((minTemperature - 32) * 5) / 9);
+    }
+    return (
+      <div className="temperature">
+      <strong> {maxTemperature}°</strong>  {minTemperature}°</div>
+    );
+  }
 
 
   return(
@@ -30,13 +35,9 @@ function temperatureMin() {
              <img src={`/img-icons/${props.data.weather[0].icon}.png`} alt={props.data.weather[0].description} />
            </div>
       <div className="highs-lows">
-     <strong> <span>             
-       {temperatureMax()}
-      </span>° {" "}
-     </strong> 
-     <span>
-       {temperatureMin()}
-       </span>°
+      <span>     
+       {temperature()}        
+      </span>
      </div>
      </div>
   )
