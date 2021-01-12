@@ -67,12 +67,12 @@ if (weatherData.ready) {
             />
           </span>
         </form>
-   <WeatherInfo data={weatherData} unit={unit} setUnit={setUnit} />
+   <WeatherInfo data={weatherData} city={weatherData.city} unit={unit} setUnit={setUnit} />
    <WeatherForecast city={weatherData.city} unit={unit} />
     </div>
     </div>
     </div>
- );
+   );
 
 } else {
  

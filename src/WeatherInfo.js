@@ -1,6 +1,7 @@
 import React from "react";
  import FormattedDate from "./FormattedDate";
  import WeatherTemperature from "./WeatherTemperature";
+ import WeatherAQI from "./WeatherAQI";
 
 export default function WeatherInfo(props) {
 function highLow(){
@@ -52,7 +53,7 @@ function highLow(){
           <li><strong>Wind:</strong> {Math.round(props.data.wind)}km/h
           </li>
           <li>
-            <strong>AQI:</strong>
+          <WeatherAQI />
           </li>
         </ul>
       </div>
