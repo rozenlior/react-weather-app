@@ -1,21 +1,18 @@
 import React from "react";
 
 export default function WeatherForecastPreview(props){
-
 function hours() {
   let date= new Date(props.data.dt * 1000);
   let hours= date.getHours();
   return `${hours}:00`;
 }
 
-
-
   function temperature() {
     let maxTemperature = Math.round(props.data.main.temp_max);
     let minTemperature = Math.round(props.data.main.temp_min);
     if (props.unit === "fahrenheit") {
-      maxTemperature = Math.round(((maxTemperature - 32) * 5) / 9);
-      minTemperature = Math.round(((minTemperature - 32) * 5) / 9);
+      maxTemperature = Math.round((maxTemperature *9)/5 +32);
+      minTemperature = Math.round((minTemperature * 9)/5 + 32);
     }
     return (
       <div className="temperature">

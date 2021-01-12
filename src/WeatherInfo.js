@@ -3,6 +3,21 @@ import React from "react";
  import WeatherTemperature from "./WeatherTemperature";
 
 export default function WeatherInfo(props) {
+function highLow(){
+  let highTemperature = Math.round(props.data.high);
+  let lowTemperature = Math.round(props.data.low);
+  if (props.unit === "fahrenheit") {
+    highTemperature = Math.round((highTemperature * 9)/5 + 32);
+    lowTemperature = Math.round((lowTemperature * 9)/5 + 32);
+  }
+  return (
+    <span className="highLow">
+{highTemperature}° {lowTemperature}°
+    </span>
+  );
+}
+
+
   return(
     <div className="WeatherInfo">
      <div className="row">
@@ -22,14 +37,15 @@ export default function WeatherInfo(props) {
       </div>
 
       <div className="col-4 main-temp-col">
-        <WeatherTemperature celsius={props.data.temperature} />
+        <WeatherTemperature unit={props.unit} setUnit={props.setUnit}
+        celsius={props.data.temperature} />
       </div>
 
       <div className="col-5">
         <ul className="special-temp-info">
-          <li>
-            <strong>High/Low:</strong> {props.data.high}°/{props.data.low}°
-          </li>
+<li>
+  <strong>High/Low:</strong> <span>{highLow()}</span>
+  </li>        
           <li>
             <strong>Humidity: </strong> {props.data.humidity}%
           </li>

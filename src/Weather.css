@@ -10,7 +10,6 @@
   background-size: cover;
 }
 
-
 .heading-wrapper {
   margin: 5px auto;
   margin-bottom: 0;
@@ -38,30 +37,43 @@ input.btn-light {
   right: 10px;
   bottom: 4px;
 }
-
-h1 {
-  font-size: 35px;
-  line-height: 1;
-  padding-top: 10px;
+.header,
+.sub-heading {
+  text-align: left;
+  color: whitesmoke;
   font-weight: bold;
-  margin-bottom: 20px;
+  font-family: "Open Sans", sans-serif;
 }
+
 .sub-heading {
   margin: 10px 20px;
   text-align: left;
-  color: black;
+  color: whitesmoke;
   margin-top: 0;
   position: relative;
   top: -5px;
   left: -5px;
-  font-weight: bold;
+    font-family: "Open Sans", sans-serif;
+
+}
+h1 {
+  font-size: 40px;
+  line-height: 1;
+  padding-top: 10px;
+    font-family: "Open Sans", sans-serif;
+
 }
 
 h2,
 h3 {
   line-height: 1;
   font-size: 20px;
+    font-family: "Open Sans", sans-serif;
+
+
 }
+
+
 
 .row-wrapper {
   margin: 20px 20px;
@@ -86,25 +98,32 @@ h3 {
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
+
 }
 
 .current-temp {
   font-size: 70px;
-  color: black;
+  color: #f8efd4;
+  font-weight: 100;
+    font-family: "Open Sans", sans-serif;
+
 }
 
 .units {
-  color: black;
+  color: #f8efd4;
   position: relative;
   top: -38px;
+    font-family: "Open Sans", sans-serif;
+
 }
 
 .special-temp-info {
   list-style: none;
-  color: black;
+  color: #f8efd4;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   margin: 0 auto;
-  text-align: left;
+  font-family: "Open Sans", sans-serif;
+
 }
