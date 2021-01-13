@@ -69,12 +69,13 @@ h3 {
   font-family: "Open Sans", sans-serif;
 }
 
-.row-wrapper {
-  margin: 20px 20px;
+.main-wrapper {
+  margin: 20px;
+  padding: 20px;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  justify-content: center;
+  justify-content: right;
   margin-top: 0;
 }
 
@@ -82,7 +83,7 @@ h3 {
   max-width: 120px;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   margin: 0 auto;
 }
@@ -113,7 +114,7 @@ h3 {
   color: #f8efd4;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: left;
+  justify-content: center;
   margin: 0 auto;
   font-family: "Open Sans", sans-serif;
 }

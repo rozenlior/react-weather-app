@@ -30,7 +30,7 @@ export default function WeatherAQI(props) {
 
     return(
       <div className="WeatherAQI">
-        <strong >AQI:</strong> {aqi}{" "}({airDesc})
+        <strong >AQI:</strong> {aqi}({airDesc})
       </div>
     );
   } else {

@@ -29,18 +29,18 @@ export default function WeatherInfo(props) {
       </div>
     </div>
   
-    <div className="row row-wrapper">
-      <div className="col-3">
+    <div className="row align-items-start"> <div className="main-wrapper">
+      <div className="col">
         <div className="main-icon">
           <img src={props.data.icon} alt={props.data.description} />
         </div>
       </div>
 
-      <div className="col-4 main-temp-col">
+      <div className="col-md-4 main-temp-col">
         <WeatherTemperature unit={props.unit} setUnit={props.setUnit} celsius={props.data.temperature} />
       </div>
 
-      <div className="col-6">
+      <div className="col-md-5">
         <ul className="special-temp-info">
           <li>
             <strong> High/Low:</strong> <span>{highLow()}</span>
@@ -56,6 +56,8 @@ export default function WeatherInfo(props) {
           </li>
         </ul>
        </div>
+       </div>
+
       </div>
    </div>
   );
