@@ -1,8 +1,8 @@
 import axios from "axios";
 import React, {useState} from "react";
 import "./Weather.css";
- import Loader from 'react-loader-spinner'
- import WeatherInfo from "./WeatherInfo";
+import Loader from 'react-loader-spinner'
+import WeatherInfo from "./WeatherInfo";
 import WeatherForecast from "./WeatherForecast";
 
 export default function Weather(props) {
@@ -36,7 +36,7 @@ function handleCityChange(event) {
 }
 
 function search() {
- const apiKey="958b71e38c385a4f0896342006026aa2";
+  const apiKey="958b71e38c385a4f0896342006026aa2";
   let unit="metric";
   let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`; 
   axios.get(apiUrl).then(handleResponse);
@@ -45,12 +45,12 @@ function search() {
 if (weatherData.ready) {
    return(
     <div className="Weather">
-         <div className="transparent-box" style={{backgroundImage:weatherData.background}}>
-    <div className="row heading-wrapper">
-      <span className="col header">
-        <h1> {weatherData.city} </h1>
+     <div className="transparent-box" style={{backgroundImage:weatherData.background}}>
+      <div className="row heading-wrapper">
+       <span className="col header">
+         <h1> {weatherData.city} </h1>
       </span>
-  <form className="search-form" onSubmit={handleSubmit}>
+        <form className="search-form" onSubmit={handleSubmit}>
           <span className="col-10">
             <input
               type="search"
@@ -67,18 +67,18 @@ if (weatherData.ready) {
             />
           </span>
         </form>
-   <WeatherInfo data={weatherData} city={weatherData.city} unit={unit} setUnit={setUnit} />
-   <WeatherForecast city={weatherData.city} unit={unit} />
-    </div>
-    </div>
+          <WeatherInfo data={weatherData} city={weatherData.city} unit={unit} setUnit={setUnit} />
+          <WeatherForecast city={weatherData.city} unit={unit} />
+      </div>
+     </div>
     </div>
    );
 
 } else {
  
 search();
- return (
- <Loader
+  return (
+  <Loader
          type="ThreeDots"
          color="#00BFFF"
          height={100}

@@ -32,10 +32,10 @@ function hours() {
              <img src={`/img-icons/${props.data.weather[0].icon}.png`} alt={props.data.weather[0].description} />
            </div>
       <div className="highs-lows">
-      <span>     
+       <span>     
        {temperature()}        
-      </span>
+       </span>
      </div>
-     </div>
+    </div>
   )
 }

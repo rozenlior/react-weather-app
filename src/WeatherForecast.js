@@ -5,11 +5,11 @@ import WeatherForecastPreview from "./WeatherForecastPreview";
 
 export default function WeatherForecast(props) {
   const [loaded, setLoaded]= useState(false);
-const [forecast, setForecast]= useState(null);
+  const [forecast, setForecast]= useState(null);
 
 function handleForecastRespponse(response){ 
-  setForecast(response.data);
-  setLoaded(true);
+   setForecast(response.data);
+   setLoaded(true);
 }
 
 if(loaded && props.city === forecast.city.name) {

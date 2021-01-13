@@ -53,27 +53,21 @@ input.btn-light {
   position: relative;
   top: -5px;
   left: -5px;
-    font-family: "Open Sans", sans-serif;
-
+  font-family: "Open Sans", sans-serif;
 }
 h1 {
   font-size: 40px;
   line-height: 1;
   padding-top: 10px;
-    font-family: "Open Sans", sans-serif;
-
+  font-family: "Open Sans", sans-serif;
 }
 
 h2,
 h3 {
   line-height: 1;
   font-size: 20px;
-    font-family: "Open Sans", sans-serif;
-
-
+  font-family: "Open Sans", sans-serif;
 }
-
-
 
 .row-wrapper {
   margin: 20px 20px;
@@ -98,23 +92,20 @@ h3 {
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-
 }
 
 .current-temp {
   font-size: 70px;
   color: #f8efd4;
   font-weight: 100;
-    font-family: "Open Sans", sans-serif;
-
+  font-family: "Open Sans", sans-serif;
 }
 
 .units {
   color: #f8efd4;
   position: relative;
   top: -38px;
-    font-family: "Open Sans", sans-serif;
-
+  font-family: "Open Sans", sans-serif;
 }
 
 .special-temp-info {
@@ -122,8 +113,7 @@ h3 {
   color: #f8efd4;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
+  justify-content: left;
   margin: 0 auto;
   font-family: "Open Sans", sans-serif;
-
 }

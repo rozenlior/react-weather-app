@@ -9,6 +9,7 @@
 .hourly-forecast {
   text-align: center;
   font-size: 16px;
+  font-family: "Open Sans", sans-serif;
 }
 
 .forecast-icons img {
@@ -20,11 +21,11 @@
 }
 
 .highs-lows {
-  font-size: 13px;
+  font-size: 15px;
   text-align: center;
+  font-family: "Open Sans", sans-serif;
 }
 
-
-.WeatherForecastPreview.col{
-margin: 0 5px;
+.WeatherForecastPreview.col {
+  margin: 0 5px;
 }
