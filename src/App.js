@@ -8,7 +8,8 @@ export default function App(props) {
       <div className="container">
             <div className="content">
             <Weather defaultCity="Los Angeles" />
-            </div>
+          
+            
             <small>
               <a
                href="https://github.com/rozenlior/react-weather-app"
@@ -16,6 +17,7 @@ export default function App(props) {
         rel="noreferrer">
         Open-source code </a> {" "} by Lior Rozen          
              </small>
+               </div>
       </div>
     </div>
   );

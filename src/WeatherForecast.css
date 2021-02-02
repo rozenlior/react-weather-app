@@ -2,6 +2,7 @@
   background: whitesmoke;
   opacity: 0.8;
   margin: 20px auto;
+  max-width: 100%;
   padding: 20px;
   border-radius: 5px;
 }
@@ -13,7 +14,7 @@
 }
 
 .forecast-icons img {
-  max-width: 70px;
+  max-width: 100%;
   margin: 20px auto;
   display: flex;
   flex-flow: row nowrap;

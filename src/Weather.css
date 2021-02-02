@@ -3,7 +3,7 @@
   padding: 30px;
   opacity: 0.8;
   border: 2px solid white;
-  max-width: 700px;
+  max-width: 80%;
   border-radius: 10px;
   background-color: rgba(96, 125, 139, 0.5);
   background-repeat: no-repeat;
@@ -23,7 +23,7 @@ form.search-form {
 
 input.search-box {
   border-radius: 10px;
-  max-width: 500px;
+  max-width: 100%;
   position: relative;
   left: 10px;
   bottom: 4px;
@@ -32,7 +32,7 @@ input.search-box {
 input.btn-light {
   border-radius: 10px;
   color: #536b78;
-  max-width: 60px;
+  max-width: 100%;
   position: relative;
   right: 10px;
   bottom: 4px;
@@ -73,14 +73,14 @@ h3 {
   margin: 20px;
   padding: 20px;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   align-items: center;
   justify-content: right;
   margin-top: 0;
 }
 
 .main-icon img {
-  max-width: 120px;
+  max-width: 100%;
   display: flex;
   flex-flow: row nowrap;
   justify-content: left;
